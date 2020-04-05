@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <title>CubeSite</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+
+
+    <link rel="stylesheet" href="css/sweetalert.css">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+
+    <!--
+    <link href="C:/Users/user/Desktop/public/css/main.css" rel="stylesheet">
+    <link href="C:/Users/user/Desktop/public/css/hover.css" rel="stylesheet" media="all">
+-->
+    <style></style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark animated fadeInDown" id="topNavbar">
+        <a class="navbar-brand" href="#">The Black Silver Cube</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Statistics <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Type</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                        <a class="dropdown-item" href="#">3x3</a>
+                        <a class="dropdown-item" href="#">4x4</a>
+                        <a class="dropdown-item" href="#">5x5</a>
+                        <a class="dropdown-item" href="#">6x6</a>
+                        <a class="dropdown-item" href="#">7x7</a>
+                        <div role="separator" class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Pyraminx</a>
+                        <a class="dropdown-item" href="#">Megaminx</a>
+                        <a class="dropdown-item" href="#">Square-1</a>
+                        <div role="separator" class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">add new Type</a>
+                    </div>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                        <a class="dropdown-item" href="#">Contact us</a>
+                        <a class="dropdown-item" href="#">Help</a>
+                        <a class="dropdown-item" href="#">Share</a>
+                        <a class="dropdown-item" href="#">Settings</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Login as <span id="navUserName">Bar</span> </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                        <a class="dropdown-item" href="#">My Profile</a>
+                        <a class="dropdown-item" href="#">View profile</a>
+                        <a class="dropdown-item" href="#">My algorithms</a>
+                        <a class="dropdown-item" href="#">Log out</a>
+                        <div role="separator" class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Setting</a>
+                        <a class="dropdown-item" href="#">Cube Setting</a>
+                        <a class="dropdown-item" href="#">Web Setting</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="background"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card bg-light shdowForDiv topHalfMain animated fadeInDown" id="DivcardStatistics">
+                    <div class="card-header">
+                        Statistics
+                    </div>
+                    <div class="card-body card-statistics">
+                        <div class="statisticsDiv">Number of solves:
+                            <span id="numberOfSolves"></span>
+                        </div>
+                        <div class="statisticsDiv">Best time:
+                            <span id="bestTime"></span>
+                        </div>
+                        <div class="statisticsDiv">Worst time:
+                            <span id="worstTime"></span>
+                        </div>
+                        <div class="statisticsDiv">Clean average:
+                            <span id="average"></span>
+                        </div>
+                        <hr>
+                        <div class="statisticsDiv">Current average of 5:
+                            <span id="currentAverageOfFive"></span>
+                        </div>
+                        <div class="statisticsDiv">Best average of 5:
+                            <span id="bestAverageOfFive"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-light shdowForDiv buttonHalfMainDiv animated fadeInLeft" id="cardPreview">
+                    <div class="card-header">
+                        Live preview
+                    </div>
+                    <div class="card-body" id="cardCubeImg">
+                        <div id="cubeImg">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-7" id="timeDiv">
+                <div class="card bg-light shdowForDiv animated fadeInUp" id="cardTimer">
+                    <div class="card-header" id="scrambleBox"></div>
+                    <div class="card-body" id="timeBox">0.00</div>
+                    <div class="card-footer">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <button id="dnfButton" class="btn btn-outline-primary" onclick="dnfLastTime()" disabled="">DNF</button>
+                            <button id="plus2Button" class="btn btn-outline-primary" onclick="plus2LastTime()" disabled="">+2</button>
+                            <button class="btn btn-outline-primary" onclick="deleteLastTime()">Delete</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card bg-light shdowForDiv mainDiv animated fadeInRight" id="cardTimes">
+                    <div class="card-header">
+                        Times
+                    </div>
+                    <div class="card-body card-times">
+                        <div id="timeTextBox"></div>
+
+                    </div>
+                    <div class="card-footer">
+
+                        <button type="button" class="btn btn-outline-primary btn-sm">
+                            <span class="fa fa-comment" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" class="btn btn-outline-primary btn-sm" onclick="deleteSelectedTime()">
+                            <span class="fa fa-trash-o" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" class="btn btn-outline-primary btn-sm" onclick="deleteAllTimes()">
+                            <span class="fa fa-refresh" aria-hidden="true"></span>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+            <span id="copyrightAndVersion">v1.1</span>
+        </div>
+    </div>
+
+    <div class="sweet-overlay" tabindex="-1" style="opacity: -0.04; display: none;"></div>
+
+    <script type="text/javascript" src="javascript/sweetalert.min.js"></script>
+    <script type="text/javascript" src="javascript/time.js"></script>
+    <script type="text/javascript" src="javascript/scramble.js"></script>
+    <script type="text/javascript" src="thirdParty/TwistySim/TwistySim.js"></script>
+    <script type="text/javascript" src="javascript/main.js"></script>
+
+    <!--
+    <script type="text/javascript" src="C:/Users/user/Desktop/public/javascript/sweetalert.min.js"></script>
+    <script type="text/javascript" src="C:/Users/user/Desktop/public/javascript/time.js"></script>
+    <script type="text/javascript" src="C:/Users/user/Desktop/public/javascript/scramble.js"></script>
+    <script type="text/javascript" src="C:/Users/user/Desktop/public/javascript/main.js"></script>
+-->
+
+
+</body>
+
+</html>

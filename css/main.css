@@ -1,0 +1,244 @@
+body {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+    padding-top: 80px;
+}
+
+#timeBox {
+    font-size: 140px;
+    color: #374047;
+    text-align: center;
+    cursor: pointer;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0px;
+}
+
+#scrambleBox {
+    font-size: 18px;
+}
+
+#timesBoxBody {
+    height: 300px;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+    text-align: left;
+    overflow-y: scroll;
+    max-height: 300px;
+    direction: rtl;
+    padding-left: 3px;
+}
+
+.timeButtons {
+    border-radius: 2px solid;
+    background: white;
+    font-size: 16px;
+}
+
+#timeBoxHeader {
+    min-height: 10px;
+    padding: 9px;
+    margin-bottom: -2px;
+    background-color: white;
+    border: 1px solid #e3e3e3;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.timeSpan {
+    color: #007bff;
+    width: 45%;
+    margin: 2%;
+    position: inherit;
+    float: left;
+    padding: 3px 6px;
+    font-size: 1vw;
+    border: 1px solid;
+    direction: ltr;
+    border-radius: 5px;
+}
+
+.timeSpan:hover {
+    color: white;
+    width: 45%;
+    margin: 2%;
+    position: inherit;
+    float: left;
+    padding: 3px 6px;
+    font-size: 1vw;
+    border: 1px solid;
+    direction: ltr;
+    border-radius: 5px;
+    background-color: #007bff;
+}
+
+.TimebuttonClicked {
+    color: white;
+    width: 45%;
+    margin: 2%;
+    position: inherit;
+    float: left;
+    padding: 3px 6px;
+    font-size: 1vw;
+    border: 1px solid;
+    direction: ltr;
+    border-radius: 5px;
+    background-color: #007bff;
+}
+
+
+}
+#timeTextBox {}
+.panel-body {}
+.btn:focus {
+    outline: none;
+}
+.card-times {
+    /*    height: 294px;*/
+    
+    padding: 5px;
+    overflow-y: scroll;
+    padding: 5px;
+}
+.card-statistics {
+    /*    height: 340px;*/
+    
+    padding: 5px;
+    text-align: left;
+    position: relative;
+}
+
+}
+#navUserName {
+    font-weight: bold;
+}
+html,
+body {
+    height: 100%;
+    background: linear-gradient(40deg, #3498DB, lightblue);
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.shdowForDiv {
+    box-shadow: 1px 5px 30px 0.5px gray;
+}
+hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.statisticsDiv {
+    margin-bottom: 5px;
+}
+#copyrightAndVersion {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    color: dimgray;
+}
+#copyrightAndVersion:hover {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    color: gray;
+    cursor: pointer;
+}
+.row {
+    display: flex;
+}
+.mainDiv {
+    height: 500px;
+}
+.col-md-20-p {
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+.col-md-40-p {
+    flex: 0 0 40%;
+    max-width: 40%;
+}
+#commentText {
+    width: 40px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.halfMainDiv {
+    height: 240px;
+}
+.buttonHalfMainDiv {
+    height: 210px;
+    margin-top: 30px;
+}
+.topHalfMainDiv {
+    height: 260px;
+}
+#cardCubeImg {
+    padding: 5px;
+}
+#timeDiv {
+    height: 325px;
+}
+
+#cardTimer {
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-delay: 0.1s;
+    -moz-animation-duration: 1.5s;
+    -moz-animation-delay: 0.1s;
+    -ms-animation-duration: 1.5s;
+    -ms-animation-delay: 0.1s;
+    -o-animation-duration: 1.5s;
+    -o-animation-delay: 0.1s;
+    
+}
+#cardTimes {
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-delay: 0.3s;
+    -moz-animation-duration: 1.5s;
+    -moz-animation-delay: 0.3s;
+    -ms-animation-duration: 1.5s;
+    -ms-animation-delay: 0.3s;
+    -o-animation-duration: 1.5s;
+    -o-animation-delay: 0.3s;
+}
+#cardPreview {
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-delay: 1s;
+    -moz-animation-duration: 1.5s;
+    -moz-animation-delay: 1s;
+    -ms-animation-duration: 1.5s;
+    -ms-animation-delay: 1s;
+    -o-animation-duration: 1.5s;
+    -o-animation-delay: 1s;
+}
+#DivcardStatistics {
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-delay: 0.8s;
+    -moz-animation-duration: 1.5s;
+    -moz-animation-delay: 0.8s;
+    -ms-animation-duration: 1.5s;
+    -ms-animation-delay: 0.8s;
+    -o-animation-duration: 1.5s;
+    -o-animation-delay: 0.8s;
+}
+
+
+#topNavbar {
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-delay: 1.4s;
+    -moz-animation-duration: 1.5s;
+    -moz-animation-delay: 1.4s;
+    -ms-animation-duration: 1.5s;
+    -ms-animation-delay: 1.4s;
+    -o-animation-duration: 1.5s;
+    -o-animation-delay: 1.4s;
+}
